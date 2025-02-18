@@ -6,10 +6,12 @@ import Home from "./pages/home";
 const App = () => {
   return (
     <Router>
-      {/* Routes */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      {/* Apply background color to the entire page */}
+      <div className="min-h-screen bg-[#121212]">
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
     </Router>
   );
 };
