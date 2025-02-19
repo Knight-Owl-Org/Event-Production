@@ -1,6 +1,6 @@
 // src/pages/home.jsx
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Hero from "../components/hero"; // Assuming Hero is inside components folder
 import AboutUs from "../components/aboutUs";
 import BookTickets from "../components/bookTickets";
