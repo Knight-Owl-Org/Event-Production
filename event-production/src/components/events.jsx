@@ -31,7 +31,11 @@ const EventBlock = ({ imgSrc, description, reverse }) => {
         <p>{description}</p>
         <a href="#" className="mt-3 flex items-center gap-4">
           View Gallery
-          <img src="/assets/arrow.png" alt="Arrow Icon" className="w-5 h-5" />
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/arrow.png`}
+            alt="Arrow Icon"
+            className="w-5 h-5"
+          />
         </a>
       </motion.div>
     </div>
@@ -41,25 +45,25 @@ const EventBlock = ({ imgSrc, description, reverse }) => {
 const Events = () => {
   const eventsData = [
     {
-      imgSrc: "/assets/eventPic1.png",
+      imgSrc: `${process.env.PUBLIC_URL}/assets/eventPic1.png`,
       description:
         "The main impetus to the development of quality civil ceremonies. The main impetus to the development of quality civil ceremonies.",
       reverse: false
     },
     {
-      imgSrc: "/assets/eventPic2.png",
+      imgSrc: `${process.env.PUBLIC_URL}/assets/eventPic2.png`,
       description:
         "The main impetus to the development of quality civil ceremonies. The main impetus to the development of quality civil ceremonies.",
       reverse: true
     },
     {
-      imgSrc: "/assets/eventPic3.png",
+      imgSrc: `${process.env.PUBLIC_URL}/assets/eventPic3.png`,
       description:
         "The main impetus to the development of quality civil ceremonies. The main impetus to the development of quality civil ceremonies.",
       reverse: false
     },
     {
-      imgSrc: "/assets/eventPic4.png",
+      imgSrc: `${process.env.PUBLIC_URL}/assets/eventPic4.png`,
       description:
         "The main impetus to the development of quality civil ceremonies. The main impetus to the development of quality civil ceremonies.",
       reverse: true

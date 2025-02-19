@@ -56,10 +56,13 @@ const AboutUs = () => {
               onClick={() => handleExpand(index)} // Handle click to expand/collapse
             >
               <img
-                src={`/assets/aboutUsPic${index + 1}.png`}
+                src={`${process.env.PUBLIC_URL}/assets/aboutUsPic${
+                  index + 1
+                }.png`}
                 alt={`AboutUsPic${index + 1}`}
                 className="w-full h-auto object-cover"
               />
+
               <div
                 className={`absolute bottom-0 left-0 right-0 bg-[#00FF55] text-black text-center py-3 transition-all duration-300 ${
                   expandedIndex === index

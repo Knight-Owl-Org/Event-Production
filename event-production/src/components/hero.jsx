@@ -10,7 +10,10 @@ const Hero = () => {
         muted
         loop
       >
-        <source src="/assets/test_video.mp4" type="video/mp4" />
+        <source
+          src={`${process.env.PUBLIC_URL}/assets/test_video.mp4`}
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
       {/* Black overlay with opacity */}
@@ -35,7 +38,7 @@ const Hero = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="/assets/linkedin.png"
+            src={`${process.env.PUBLIC_URL}/assets/linkedin.png`}
             alt="LinkedIn"
             className="w-8 h-8 sm:w-9 sm:h-9"
           />
@@ -46,14 +49,14 @@ const Hero = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="/assets/facebook.png"
+            src={`${process.env.PUBLIC_URL}/assets/facebook.png`}
             alt="Facebook"
             className="w-8 h-8 sm:w-9 sm:h-9"
           />
         </a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
           <img
-            src="/assets/twitter.png"
+            src={`${process.env.PUBLIC_URL}/assets/twitter.png`}
             alt="Twitter"
             className="w-8 h-8 sm:w-9 sm:h-9"
           />
@@ -64,7 +67,7 @@ const Hero = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="/assets/instagram.png"
+            src={`${process.env.PUBLIC_URL}/assets/instagram.png`}
             alt="Instagram"
             className="w-8 h-8 sm:w-9 sm:h-9"
           />
@@ -114,7 +117,7 @@ const Hero = () => {
           UK Stadium, London
         </p>
         <img
-          src="/assets/eventPic.png"
+          src={`${process.env.PUBLIC_URL}/assets/eventPic.png`}
           alt="Pitbull Concert"
           className="w-full rounded mt-2"
         />

@@ -5,7 +5,7 @@ const eventData = [
     id: 1,
     date: "05",
     month: "December",
-    imageSrc: "/assets/eventPic.png",
+    imageSrc: `${process.env.PUBLIC_URL}/assets/eventPic.png`,
     description:
       "The main impetus to the development of quality civil ceremonies"
   },
@@ -13,49 +13,49 @@ const eventData = [
     id: 2,
     date: "05",
     month: "December",
-    imageSrc: "/assets/eventPic.png",
+    imageSrc: `${process.env.PUBLIC_URL}/assets/eventPic.png`,
     description: "Experience the joy of world-class performances this season."
   },
   {
     id: 3,
     date: "05",
     month: "December",
-    imageSrc: "/assets/eventPic.png",
+    imageSrc: `${process.env.PUBLIC_URL}/assets/eventPic.png`,
     description: "Join us for an exclusive concert with top artists."
   },
   {
     id: 4,
     date: "05",
     month: "December",
-    imageSrc: "/assets/eventPic.png",
+    imageSrc: `${process.env.PUBLIC_URL}/assets/eventPic.png`,
     description: "Don't miss this unforgettable cultural event."
   },
   {
     id: 5,
     date: "05",
     month: "December",
-    imageSrc: "/assets/eventPic.png",
+    imageSrc: `${process.env.PUBLIC_URL}/assets/eventPic.png`,
     description: "Witness the magic of live theater performances."
   },
   {
     id: 6,
     date: "05",
     month: "December",
-    imageSrc: "/assets/eventPic.png",
+    imageSrc: `${process.env.PUBLIC_URL}/assets/eventPic.png`,
     description: "An inspiring event featuring renowned speakers."
   },
   {
     id: 7,
     date: "05",
     month: "December",
-    imageSrc: "/assets/eventPic.png",
+    imageSrc: `${process.env.PUBLIC_URL}/assets/eventPic.png`,
     description: "A festival filled with music, dance, and celebration."
   },
   {
     id: 8,
     date: "05",
     month: "December",
-    imageSrc: "/assets/eventPic.png",
+    imageSrc: `${process.env.PUBLIC_URL}/assets/eventPic.png`,
     description: "Explore the latest trends in art and design."
   }
 ];

@@ -44,12 +44,12 @@ const ContactUs = () => {
       {/* Background Ellipses */}
       <div className="absolute top-0 left-0 right-0 bottom-0">
         <img
-          src="/assets/contactUsPic1.png"
+          src={`${process.env.PUBLIC_URL}/assets/contactUsPic1.png`}
           alt="Ellipse 1"
           className="absolute top-[20%] right-[60%] w-[200px] h-[200px] lg:top-[21%] lg:left-[18%] lg:w-[300px] lg:h-[300px] sm:top-[15%] sm:right-[65%] sm:w-[250px] sm:h-[250px] w-[200px] h-[200px]"
         />
         <img
-          src="/assets/contactUsPic2.png"
+          src={`${process.env.PUBLIC_URL}/assets/contactUsPic2.png`}
           alt="Ellipse 2"
           className="absolute top-[65%] left-[60%] w-[200px] h-[200px] lg:top-[60%] lg:left-[60%] lg:w-[300px] lg:h-[300px] sm:top-[45%] sm:left-[70%] sm:w-[250px] sm:h-[250px] w-[200px] h-[200px]"
         />
@@ -141,7 +141,7 @@ const ContactUs = () => {
       {/* Image positioned under the form for smaller screens, bottom-right on large screens */}
       <div className="lg:absolute lg:bottom-0 lg:right-0 lg:mb-8 lg:mr-8 w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] mt-10 sm:mt-20">
         <img
-          src="/assets/contactUsPic3.png" // Update with your image path
+          src={`${process.env.PUBLIC_URL}/assets/contactUsPic3.png`}
           alt="Contact Image"
           className="w-full h-full object-cover"
         />

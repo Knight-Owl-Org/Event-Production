@@ -4,10 +4,11 @@ const ComingSoon = () => {
   return (
     <div className="relative min-h-screen bg-[#121212]">
       <img
-        src="/assets/comingSoonPic.png"
+        src={`${process.env.PUBLIC_URL}/assets/comingSoonPic.png`}
         alt="Coming Soon"
         className="absolute inset-0 w-full h-full object-cover opacity-50"
       />
+
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center">
         {/* Container for left and right sections */}
         <div className="flex flex-col md:flex-row justify-between w-full px-6 md:px-10 lg:px-20">
