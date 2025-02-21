@@ -9,7 +9,10 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:3000", // Your frontend URL
+    origin: [
+      "http://localhost:3000",
+      "https://event-production-7wd2.vercel.app/"
+    ],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"]
   })
