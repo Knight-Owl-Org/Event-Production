@@ -27,6 +27,14 @@ const ContactUs = () => {
     setLoading(true); // Start loading
     setError(""); // Clear previous error messages
     setSuccess(""); // Clear previous success messages
+
+    // Log the request URL and form data
+    console.log(
+      "Sending request to:",
+      "https://event-production-7wd2.vercel.app/send-email"
+    );
+    console.log("Form data:", formData);
+
     try {
       // Send form data to the backend API
       await axios.post(
