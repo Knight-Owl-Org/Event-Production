@@ -33,7 +33,10 @@ const ContactUs = () => {
       setFormData({ name: "", email: "", contactNumber: "", message: "" });
     } catch (error) {
       setError("Failed to send message. Please try again.");
-      console.log("Error sending message:", error); // Log the error details
+      console.log(
+        "Error details:",
+        error.response ? error.response.data : error.message
+      ); // Log more error info
     } finally {
       setLoading(false); // Stop loading
     }

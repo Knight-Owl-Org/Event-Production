@@ -9,12 +9,15 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://event-production-7wd2.vercel.app/"
-    ],
+    // origin: [
+    //   "http://localhost:3000",
+    //   "https://event-production-7wd2.vercel.app/"
+    // ],
+    origin:
+      "https://event-production-7wd2-5xjii8ijp-tinys-projects-7e38d145.vercel.app",
     methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type"]
+    allowedHeaders: ["Content-Type"],
+    credentials: true
   })
 );
 app.use(bodyParser.json());
@@ -22,8 +25,8 @@ app.use(bodyParser.json());
 // Create a Nodemailer transporter
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
-  port: 587,
-  secure: false, // use TLS
+  port: 456,
+  secure: true, // use TLS
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
