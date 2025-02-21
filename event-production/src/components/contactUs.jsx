@@ -28,9 +28,10 @@ const ContactUs = () => {
     setError(""); // Clear previous error messages
     setSuccess(""); // Clear previous success messages
     try {
-      // await axios.post("http://localhost:5000/send-email", formData);
+      // Send form data to the backend API
       await axios.post(
-        "https://event-production-7wd2.vercel.app/send-email",
+        "https://event-production-7wd2.vercel.app/send-email" ||
+          "http://localhost:5000",
         formData
       );
       setSuccess("Message sent successfully!");

@@ -11,7 +11,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000", // Local development frontend
-      "https://event-production-7wd2.vercel.app" // The production frontend URL
+      "https://event-production-7wd2.vercel.app" // Production frontend URL
     ],
     methods: ["GET", "POST", "OPTIONS"], // Add OPTIONS in case Vercel requires it
     allowedHeaders: ["Content-Type", "Authorization"], // Ensure the necessary headers are allowed
@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
-  secure: true, // use TLS
+  secure: true, // Use TLS
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
@@ -44,7 +44,7 @@ app.post("/send-email", (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: "tiny@knightowl.online", // Replace with the email address where you want the messages sent
+    to: "tiny@knightowl.online", // Replace with your target email
     subject: `New Contact Us Message from ${name}`,
     text: `
       Name: ${name}
