@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 // Create a Nodemailer transporter
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
-  port: 456,
+  port: 465,
   secure: true, // use TLS
   auth: {
     user: process.env.EMAIL_USER,
