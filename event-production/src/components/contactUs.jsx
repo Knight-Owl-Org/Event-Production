@@ -27,29 +27,17 @@ const ContactUs = () => {
     setLoading(true); // Start loading
     setError(""); // Clear previous error messages
     setSuccess(""); // Clear previous success messages
-
-    // Log the request URL and form data
-    console.log(
-      "Sending request to:",
-      "https://event-production-7wd2.vercel.app/send-email"
-    );
-    console.log("Form data:", formData);
-
     try {
-      // Send form data to the backend API
       await axios.post(
         "https://event-production-7wd2.vercel.app/send-email" ||
-          "http://localhost:5000",
+          "http://localhost:5000/send-email",
         formData
       );
       setSuccess("Message sent successfully!");
       setFormData({ name: "", email: "", contactNumber: "", message: "" });
     } catch (error) {
       setError("Failed to send message. Please try again.");
-      console.log(
-        "Error details:",
-        error.response ? error.response.data : error.message
-      ); // Log more error info
+      console.log("Error sending message:", error); // Log the error details
     } finally {
       setLoading(false); // Stop loading
     }
