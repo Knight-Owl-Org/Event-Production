@@ -13,8 +13,8 @@ app.use(
       "http://localhost:3000", // Local development frontend
       "https://event-production-7wd2.vercel.app" // The production frontend URL
     ],
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type"],
+    methods: ["GET", "POST", "OPTIONS"], // Add OPTIONS in case Vercel requires it
+    allowedHeaders: ["Content-Type", "Authorization"], // Ensure the necessary headers are allowed
     credentials: true
   })
 );
