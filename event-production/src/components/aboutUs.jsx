@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AnimatedPopUp from "./AnimatedPopUp";
+
 const AboutUs = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
@@ -73,7 +74,12 @@ const AboutUs = () => {
                 group-hover:h-36 group-hover:opacity-80 lg:hover:h-36 lg:hover:opacity-80`}
               >
                 <span className="text-lg">{label}</span>
-                <p className="text-xs mt-1">
+                {/* Text visible on hover or when selected */}
+                <p
+                  className={`text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                    expandedIndex === index ? "opacity-100" : ""
+                  }`}
+                >
                   {label === "Calendar"
                     ? "The main impetus to the development of quality civil ceremonies"
                     : label === "Shows"
