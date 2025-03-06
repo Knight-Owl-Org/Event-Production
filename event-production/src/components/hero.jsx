@@ -9,47 +9,45 @@ const Hero = ({ activeSection }) => {
       {/* Black overlay with opacity */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 z-10"></div>
 
-      {/* Border - changed back to fixed but with viewport-relative units */}
-      <div className="fixed top-[5px] left-[5px] right-[5px] bottom-[5px] sm:top-[8px] sm:left-[8px] sm:right-[8px] sm:bottom-[8px] md:top-[10px] md:left-[10px] md:right-[10px] md:bottom-[10px] lg:top-[12px] lg:left-[12px] lg:right-[12px] lg:bottom-[12px] border-[1px] border-[#00FF55] rounded-xl z-10 pointer-events-none"></div>
+     {/* Wrapper with built-in outline */}
+<div className="relative w-full h-full p-4 sm:p-8 md:p-12 lg:p-16 z-10 outline outline-[1px] outline-[#00FF55] rounded-xl">
+  {/* Content inside the wrapper */}
+  <div className="text-center mt-12 sm:mt-16 md:mt-20">
+    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+      Exploring the <br /> World of <span className="text-[#00FF55]">EVENTS</span>
+    </h1>
+  </div>
+</div>
 
-      {/* Wrapper with padding */}
-      <div className="relative w-full h-full p-4 sm:p-8 md:p-12 lg:p-16 z-10">
-        {/* Content inside the wrapper */}
-        <div className="text-center mt-12 sm:mt-16 md:mt-20">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            Exploring the <br /> World of <span className="text-[#00FF55]">EVENTS</span>
-          </h1>
-        </div>
-      </div>
 
       {/* Social Icons with Black Background */}
-      <div className="absolute top-2 right-2 sm:top-4 sm:right-4 flex space-x-2 z-20 bg-black p-2 rounded-md">
+      <div className="absolute top-2 right-2 sm:top-4 sm:right-4 flex space-x-1 sm:space-x-2 z-20 bg-black p-1 sm:p-2 rounded-md">
         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <img src={`${process.env.PUBLIC_URL}/assets/linkedin.png`} alt="LinkedIn" className="w-6 h-6 sm:w-8 sm:h-8" />
+          <img src={`${process.env.PUBLIC_URL}/assets/linkedin.png`} alt="LinkedIn" className="w-5 h-5 sm:w-8 sm:h-8" />
         </a>
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <img src={`${process.env.PUBLIC_URL}/assets/facebook.png`} alt="Facebook" className="w-6 h-6 sm:w-8 sm:h-8" />
+          <img src={`${process.env.PUBLIC_URL}/assets/facebook.png`} alt="Facebook" className="w-5 h-5 sm:w-8 sm:h-8" />
         </a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <img src={`${process.env.PUBLIC_URL}/assets/twitter.png`} alt="Twitter" className="w-6 h-6 sm:w-8 sm:h-8" />
+          <img src={`${process.env.PUBLIC_URL}/assets/twitter.png`} alt="Twitter" className="w-5 h-5 sm:w-8 sm:h-8" />
         </a>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
           <img
             src={`${process.env.PUBLIC_URL}/assets/instagram.png`}
             alt="Instagram"
-            className="w-6 h-6 sm:w-8 sm:h-8"
+            className="w-5 h-5 sm:w-8 sm:h-8"
           />
         </a>
-        <h2 className="text-[#00FF5580] text-center mt-1 sm:mt-2 font-inter font-semibold text-xs sm:text-sm">
+        <h2 className="text-[#00FF5580] text-center mt-1 sm:mt-2 font-inter font-semibold text-[10px] sm:text-sm">
           Check out
         </h2>
       </div>
 
       {/* Navigation at the Bottom Left - changed to fixed */}
-      <div className="fixed bottom-0 left-6 sm:bottom-0 sm:left-10 md:bottom-0 md:left-14 lg:bottom-0 lg:left-20 flex flex-wrap gap-2 sm:gap-4 z-20 bg-black p-2 rounded-md max-w-[90%] sm:max-w-none">
+      <div className="fixed top-0 left-4 sm:top-0 sm:left-10 md:top-0 md:left-14 lg:top-0 lg:left-20 flex flex-wrap gap-1 sm:gap-4 z-20 bg-black p-1 sm:p-2 rounded-md max-w-[90%] max-h sm:max-w-none">
         <a
           href="/home"
-          className={`hover:border-b-2 hover:border-[#00FF5580] transition-all duration-300 text-[#00FF5580] font-semibold pb-1 text-xs sm:text-sm md:text-base ${
+          className={`hover:border-b-2 hover:border-[#00FF5580] transition-all duration-300 text-[#00FF5580] font-semibold pb-1 text-[10px] sm:text-sm md:text-base ${
             activeSection === "home" ? "border-b-2 border-[#00FF5580]" : ""
           }`}
         >
@@ -57,7 +55,7 @@ const Hero = ({ activeSection }) => {
         </a>
         <a
           href="/aboutus"
-          className={`hover:border-b-2 hover:border-[#00FF5580] transition-all duration-300 text-[#00FF5580] font-semibold pb-1 text-xs sm:text-sm md:text-base ${
+          className={`hover:border-b-2 hover:border-[#00FF5580] transition-all duration-300 text-[#00FF5580] font-semibold pb-1 text-[10px] sm:text-sm md:text-base ${
             activeSection === "aboutUs" ? "border-b-2 border-[#00FF5580]" : ""
           }`}
         >
@@ -65,7 +63,7 @@ const Hero = ({ activeSection }) => {
         </a>
         <a
           href="/events"
-          className={`hover:border-b-2 hover:border-[#00FF5580] transition-all duration-300 text-[#00FF5580] font-semibold pb-1 text-xs sm:text-sm md:text-base ${
+          className={`hover:border-b-2 hover:border-[#00FF5580] transition-all duration-300 text-[#00FF5580] font-semibold pb-1 text-[10px] sm:text-sm md:text-base ${
             activeSection === "events" ? "border-b-2 border-[#00FF5580]" : ""
           }`}
         >
@@ -73,7 +71,7 @@ const Hero = ({ activeSection }) => {
         </a>
         <a
           href="/contactus"
-          className={`hover:border-b-2 hover:border-[#00FF5580] transition-all duration-300 text-[#00FF5580] font-semibold pb-1 text-xs sm:text-sm md:text-base ${
+          className={`hover:border-b-2 hover:border-[#00FF5580] transition-all duration-300 text-[#00FF5580] font-semibold pb-1 text-[10px] sm:text-sm md:text-base ${
             activeSection === "contactUs" ? "border-b-2 border-[#00FF5580]" : ""
           }`}
         >
