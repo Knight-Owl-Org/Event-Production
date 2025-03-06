@@ -56,7 +56,7 @@ const Hero = ({ activeSection }) => {
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
-        className="fixed top-0 left-4 sm:top-0 sm:left-10 md:top-0 md:left-14 lg:top-0 lg:left-20 flex flex-wrap gap-1 sm:gap-4 z-20 bg-black p-1 sm:p-2 rounded-md max-w-[90%] max-h sm:max-w-none"
+        className="fixed top-0 left-4 sm:top-0 sm:left-10 md:top-0 md:left-14 lg:top-0 lg:left-20 flex flex-wrap gap-2 sm:gap-4 z-20 bg-black p-1 sm:p-2 rounded-md max-w-[90%] max-h sm:max-w-none"
       >
         <a
           href="/home"
